@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* The only screen “media type” means that the contained styles should only 
+    be applied to devices with screens (opposed to printed documents). 
+    https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_types */
+
+/* The min-width and max-width parts are called “media features”. 
+    https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_features */
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+    body {
+        background-color: #F09A9D; /* Red */
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    body {
+        background-color: #F5CF8E; /* Yellow */ 
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+    body {
+        background-color: #B2D6FF; /* Blue */
+    }
+}
+
+/* The above media queries are by far the most common ones you’ll encounter, but there are 
+    a lot of other conditions you can check for, including whether the device is in portrait 
+    or landscape mode, the resolution of its screen, and whether it has a mouse or not. */
