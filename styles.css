@@ -49,6 +49,7 @@
 
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
+
     .sign-up,
     .feature-1,
     .feature-2,
@@ -57,7 +58,29 @@
     }
 }
 
-/* The only difference between the mobile and tablet mockups is that the 
-    Sign Up and Feature sections form a 2×2 grid instead of a single column.
-    Flexbox makes this real easy. Simply adjust the widths of the flex 
-    items to be half the screen and flex-wrap will take care of the rest. */
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+    .page {
+        width: 960px;
+        margin: 0 auto;
+    }
+
+    .feature-1,
+    .feature-2,
+    .feature-3 {
+        width: 33.3%;
+    }
+
+    .header {
+        height: 400px;
+    }
+
+    .sign-up {
+        height: 200px;
+        order: 1;
+    }
+
+    .content {
+        order: 2;
+    }
+}
