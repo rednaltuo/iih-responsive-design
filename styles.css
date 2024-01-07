@@ -4,34 +4,53 @@
     box-sizing: border-box;
 }
 
-/* The only screen “media type” means that the contained styles should only 
-    be applied to devices with screens (opposed to printed documents). 
-    https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_types */
-
-/* The min-width and max-width parts are called “media features”. 
-    https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_features */
-
-/* Mobile Styles */
-@media only screen and (max-width: 400px) {
-    body {
-        background-color: #F09A9D; /* Red */
-    }
+.page {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-/* Tablet Styles */
-@media only screen and (min-width: 401px) and (max-width: 960px) {
-    body {
-        background-color: #F5CF8E; /* Yellow */ 
-    }
+.section {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Desktop Styles */
-@media only screen and (min-width: 961px) {
-    body {
-        background-color: #B2D6FF; /* Blue */
-    }
+.menu {
+    background-color: #5995da;
+    height: 80px;
 }
 
-/* The above media queries are by far the most common ones you’ll encounter, but there are 
-    a lot of other conditions you can check for, including whether the device is in portrait 
-    or landscape mode, the resolution of its screen, and whether it has a mouse or not. */
+.header {
+    background-color: #B2D6FF;
+}
+
+.content {
+    background-color: #eaedf0;
+    height: 600px;
+}
+
+.sign-up {
+    background-color: #d6e9fe;
+}
+
+.feature-1 {
+    background-color: #F5CF8E;
+}
+
+.feature-2 {
+    background-color: #F09A9D;
+}
+
+.feature-3 {
+    background-color: #c8c6fa;
+}
+
+/* By keeping these base styles outside of the media queries, we’re able 
+    to override and add on to them as we implement our specific layouts. 
+    This is really convenient when, for instance, your designer wants to 
+    tweak the color scheme for the entire website. 
+    Instead of tracking down redundant background-color declarations 
+    in several @media rules, you only have to update it here. 
+    That change automatically applies to the mobile, tablet, and desktop layouts. */
