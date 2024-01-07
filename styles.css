@@ -47,10 +47,17 @@
     background-color: #c8c6fa;
 }
 
-/* By keeping these base styles outside of the media queries, we’re able 
-    to override and add on to them as we implement our specific layouts. 
-    This is really convenient when, for instance, your designer wants to 
-    tweak the color scheme for the entire website. 
-    Instead of tracking down redundant background-color declarations 
-    in several @media rules, you only have to update it here. 
-    That change automatically applies to the mobile, tablet, and desktop layouts. */
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    .sign-up,
+    .feature-1,
+    .feature-2,
+    .feature-3 {
+        width: 50%;
+    }
+}
+
+/* The only difference between the mobile and tablet mockups is that the 
+    Sign Up and Feature sections form a 2×2 grid instead of a single column.
+    Flexbox makes this real easy. Simply adjust the widths of the flex 
+    items to be half the screen and flex-wrap will take care of the rest. */
